@@ -1,1 +1,1 @@
-Added Descriptions for Milestone-1
+Repository to Teach C Programming as per Industry Standards
