@@ -1,0 +1,33 @@
+import smtplib
+from email.message import EmailMessage
+
+urm=open('GmailUR.txt','r') #Fetches Sender EmailId
+urp=open('PassUR.txt','r')  #Fetches Sender Password
+
+socmail = urm.read()
+password = urp.read()
+
+sub = open('Subject.txt','r')   #Fetches Subject of Email
+subject = sub.read()
+
+sandesh = open('Message.txt','r')   #Fetches Body/Message of Email
+smessage = sandesh.read()
+
+mailid = open('Mail.txt','r')   #Fetches Receiver EmailId 
+j = mailid.readline()
+Email=j.split()
+
+s = smtplib.SMTP('smtp.gmail.com', 587)     #Configures SMTP Server on Port number 587
+s.starttls()
+s.login(socmail, password)
+
+email = EmailMessage()
+email['From'] = socmail
+email['To'] = Email
+email['Subject'] = subject
+email.set_content(smessage)
+s.send_message(email)
+
+print('Message Sent to',Email)
+print('Done')
+
