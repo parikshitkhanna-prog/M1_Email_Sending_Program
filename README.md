@@ -1,1 +1,1 @@
-Repository to Teach C Programming as per Industry Standards
+Repository to do C Programming as per Industry Standards
