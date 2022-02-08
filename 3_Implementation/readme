@@ -1,1 +1,6 @@
-
+Here you can see how to send mails form C language code.
+Specify "Sender EmailID" in "GmailUR.txt" file.
+Specify "Sender mail password" in "PassUR.txt" file.
+Specify "Receiver EmailID" in "Mail.txt" file.
+Type your message/body of email in "Message.txt" file.
+Type Subject of your email in "Subject.txt" file.
